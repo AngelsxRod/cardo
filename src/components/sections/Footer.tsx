@@ -20,14 +20,19 @@ const socialIcons: Record<string, ReactElement> = {
 
 export default function Footer() {
   return (
-    <footer id="contacto" className="border-t border-border bg-foreground text-background">
-      <Container className="flex flex-col gap-8 py-16 sm:flex-row sm:items-start sm:justify-between">
+    <footer
+      id="contacto"
+      className="relative overflow-hidden border-t border-border bg-foreground text-background"
+    >
+      <ThistleMark className="pointer-events-none absolute -bottom-10 -right-10 h-72 w-72 text-background/[0.06]" />
+
+      <Container className="relative flex flex-col gap-10 py-16 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <div className="flex items-center gap-2">
-            <ThistleMark className="h-6 w-6" />
-            <p className="font-display text-xl font-semibold tracking-tight">Cardo</p>
+          <div className="flex items-center gap-3">
+            <ThistleMark className="h-8 w-8" />
+            <p className="font-display text-2xl font-semibold tracking-tight">Cardo</p>
           </div>
-          <p className="mt-2 max-w-xs text-sm text-background/70">
+          <p className="mt-3 max-w-xs text-sm text-background/70">
             Ingredientes honestos, sabor sin excusas.
           </p>
         </div>
