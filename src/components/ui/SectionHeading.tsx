@@ -1,3 +1,5 @@
+import ThistleMark from "@/components/ui/ThistleMark";
+
 type SectionHeadingProps = {
   eyebrow: string;
   title: string;
@@ -11,10 +13,13 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className="max-w-2xl">
-      <span className="text-sm font-medium uppercase tracking-widest text-accent">
-        {eyebrow}
-      </span>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+      <div className="flex items-center gap-2 text-accent">
+        <ThistleMark className="h-4 w-4" />
+        <span className="font-mono text-xs font-medium uppercase tracking-[0.2em]">
+          {eyebrow}
+        </span>
+      </div>
+      <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
         {title}
       </h2>
       {description ? (
