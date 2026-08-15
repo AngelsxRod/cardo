@@ -86,6 +86,7 @@ export type ContactInfo = {
   hours: string;
   phone: string;
   email: string;
+  whatsappUrl: string;
   socials: NavLink[];
 };
 
@@ -94,6 +95,8 @@ export const contactInfo: ContactInfo = {
   hours: "Lun–Sáb · 7:00am – 8:00pm",
   phone: "+502 1234-5678",
   email: "hola@cardo.gt",
+  whatsappUrl:
+    "https://wa.me/50212345678?text=Hola%2C%20quisiera%20reservar%20una%20mesa%20en%20Cardo",
   socials: [
     { label: "Instagram", href: "#" },
     { label: "Facebook", href: "#" },

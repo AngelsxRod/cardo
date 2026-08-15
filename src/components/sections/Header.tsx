@@ -4,7 +4,7 @@ import { useState } from "react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import ThistleMark from "@/components/ui/ThistleMark";
-import { navLinks } from "@/lib/data";
+import { contactInfo, navLinks } from "@/lib/data";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +31,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <Button href="#contacto" variant="primary" className="hidden md:inline-flex">
+        <Button
+          href={contactInfo.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="primary"
+          className="hidden md:inline-flex"
+        >
           Reservar
         </Button>
 
@@ -72,7 +78,9 @@ export default function Header() {
               </a>
             ))}
             <Button
-              href="#contacto"
+              href={contactInfo.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               variant="primary"
               onClick={() => setIsMenuOpen(false)}
               className="mt-2"
