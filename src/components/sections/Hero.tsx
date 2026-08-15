@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[85vh] items-end overflow-hidden">
       <Image
-        src="https://picsum.photos/seed/cardo-hero/1920/1080"
+        src="https://images.unsplash.com/photo-1709548145082-04d0cde481d4?q=80&w=1920&auto=format&fit=crop"
         alt="Mesa servida en el restaurante Cardo"
         fill
         priority
