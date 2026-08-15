@@ -48,6 +48,9 @@ Requiere [pnpm](https://pnpm.io/installation).
 # Instalar dependencias
 pnpm install
 
+# Copiar las variables de entorno de ejemplo
+cp .env.example .env.local
+
 # Levantar el servidor de desarrollo
 pnpm dev
 
