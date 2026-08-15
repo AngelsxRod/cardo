@@ -19,7 +19,8 @@ Next.js 16 (App Router, Turbopack) · Tailwind CSS v4 (modo CSS-first, **no exis
 ## Reglas de esta base de código
 
 - **Todo el contenido del sitio vive en `src/lib/data.ts`**, tipado con TypeScript (menú, testimonios, galería, nav, contacto). Nunca hardcodear texto/precios/links directamente en un componente de sección — agregar o editar en `data.ts`.
-- **`src/components/sections/`** — un componente por sección de la landing (Header, Hero, About, Menu, Gallery, Testimonials, Location, Footer), en ese orden en `src/app/page.tsx`. **`src/components/ui/`** — piezas reutilizables sin conocimiento del contenido (Button, Container, SectionHeading, ThistleMark).
+- **`src/components/sections/`** — un componente por sección de la landing (Header, Hero, About, Menu, Gallery, Testimonials, Location, Contact, Footer), en ese orden en `src/app/page.tsx`. **`src/components/ui/`** — piezas reutilizables sin conocimiento del contenido (Button, Container, SectionHeading, ThistleMark).
+- El nav del Header tiene un link "Contacto" (`#contacto`) que apunta a la sección `Contact.tsx` (no al Footer) — si se elimina o renombra esa sección, hay que actualizar `navLinks` en `data.ts` para que no quede un anchor roto.
 - **Server Components por defecto.** `Header.tsx` es el único Client Component (necesita `useState` para el menú móvil) — antes de agregar `"use client"` a algo, confirmar que de verdad necesita interactividad en el navegador.
 - **Sin librerías de UI** (nada de shadcn ni componentes preconstruidos) — todo a mano con Tailwind. Sin librerías de íconos — los SVG (incluyendo `ThistleMark`, la firma visual de la marca) se escriben a mano e inline.
 - **Imágenes**: siempre `next/image`, nunca `<img>`. Los remotos permitidos están en `next.config.ts` → `images.remotePatterns` (hoy solo `images.unsplash.com`; si se agrega otro host de imágenes hay que sumarlo ahí o Next las bloquea con 400).

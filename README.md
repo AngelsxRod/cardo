@@ -32,7 +32,8 @@ Sin librerías de componentes de UI (nada de shadcn ni similares) — todo const
 5. **Galería** — grid asimétrico de fotos del ambiente y la comida
 6. **Testimonios** — citas de clientes en formato editorial
 7. **Ubicación** — dirección, horario y un mapa ilustrado (no es un mapa real, es una pieza de diseño propia)
-8. **Footer** — redes sociales, contacto y copyright
+8. **Contacto** — WhatsApp, llamada y correo como canales directos, cada uno con su propio link (`wa.me`, `tel:`, `mailto:`)
+9. **Footer** — redes sociales, contacto y copyright
 
 ## Sistema de diseño
 
