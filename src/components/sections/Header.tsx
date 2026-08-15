@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import ThistleMark from "@/components/ui/ThistleMark";
 import { navLinks } from "@/lib/data";
 
 export default function Header() {
@@ -11,8 +12,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm">
       <Container className="flex h-16 items-center justify-between">
-        <a href="#" className="text-xl font-semibold tracking-tight text-foreground">
-          Cardo
+        <a href="#" className="flex items-center gap-2 text-foreground">
+          <ThistleMark className="h-6 w-6" />
+          <span className="font-display text-xl font-semibold tracking-tight">
+            Cardo
+          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -20,7 +24,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="font-mono text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
@@ -62,7 +66,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-base font-medium text-foreground hover:bg-muted"
+                className="rounded-sm px-3 py-2.5 font-mono text-sm uppercase tracking-[0.1em] text-foreground hover:bg-muted"
               >
                 {link.label}
               </a>

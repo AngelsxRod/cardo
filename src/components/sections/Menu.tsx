@@ -1,11 +1,10 @@
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Card from "@/components/ui/Card";
 import { menuItems } from "@/lib/data";
 
 export default function Menu() {
   return (
-    <section id="menu" className="bg-muted py-24">
+    <section id="menu" className="py-24">
       <Container>
         <SectionHeading
           eyebrow="Menú destacado"
@@ -13,19 +12,28 @@ export default function Menu() {
           description="Una selección de nuestros platillos y bebidas más pedidos."
         />
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-x-12 sm:grid-cols-2">
           {menuItems.map((item) => (
-            <Card key={item.name} className="flex flex-col">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-lg font-semibold text-foreground">{item.name}</h3>
-                <span className="whitespace-nowrap font-mono text-lg font-semibold text-accent">
+            <li
+              key={item.name}
+              className="border-t border-border py-6 first:border-t-0 sm:[&:nth-child(2)]:border-t-0"
+            >
+              <div className="flex items-baseline gap-3">
+                <span className="font-display text-lg font-semibold text-foreground">
+                  {item.name}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="h-px flex-1 translate-y-[-3px] border-b border-dotted border-border"
+                />
+                <span className="whitespace-nowrap font-mono text-base text-accent">
                   {item.price}
                 </span>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground">{item.description}</p>
-            </Card>
+              <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

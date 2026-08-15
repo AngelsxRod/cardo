@@ -1,5 +1,6 @@
 import type { ReactElement } from "react";
 import Container from "@/components/ui/Container";
+import ThistleMark from "@/components/ui/ThistleMark";
 import { contactInfo } from "@/lib/data";
 
 const socialIcons: Record<string, ReactElement> = {
@@ -22,13 +23,16 @@ export default function Footer() {
     <footer id="contacto" className="border-t border-border bg-foreground text-background">
       <Container className="flex flex-col gap-8 py-16 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="text-xl font-semibold tracking-tight">Cardo</p>
+          <div className="flex items-center gap-2">
+            <ThistleMark className="h-6 w-6" />
+            <p className="font-display text-xl font-semibold tracking-tight">Cardo</p>
+          </div>
           <p className="mt-2 max-w-xs text-sm text-background/70">
             Ingredientes honestos, sabor sin excusas.
           </p>
         </div>
 
-        <div className="space-y-2 text-sm text-background/80">
+        <div className="space-y-2 font-mono text-sm text-background/80">
           <p>{contactInfo.address}</p>
           <p>{contactInfo.phone}</p>
           <p>{contactInfo.email}</p>
@@ -48,7 +52,7 @@ export default function Footer() {
         </div>
       </Container>
 
-      <Container className="border-t border-background/15 py-6 text-xs text-background/60">
+      <Container className="border-t border-background/15 py-6 font-mono text-xs text-background/60">
         © {new Date().getFullYear()} Cardo. Todos los derechos reservados.
       </Container>
     </footer>

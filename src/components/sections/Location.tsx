@@ -10,7 +10,7 @@ export default function Location() {
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:items-center">
           <div
-            className="relative flex aspect-video items-center justify-center rounded-2xl border border-border bg-muted bg-[linear-gradient(var(--color-border)_1px,transparent_1px),linear-gradient(90deg,var(--color-border)_1px,transparent_1px)] bg-[size:32px_32px]"
+            className="relative flex aspect-video items-center justify-center rounded-sm border border-border bg-muted bg-[linear-gradient(var(--color-border)_1px,transparent_1px),linear-gradient(90deg,var(--color-border)_1px,transparent_1px)] bg-[size:32px_32px]"
             role="img"
             aria-label="Mapa ilustrativo de la ubicación de Cardo"
           >
@@ -25,16 +25,16 @@ export default function Location() {
 
           <div className="space-y-6">
             <div>
-              <h3 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
+              <h3 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
                 Dirección
               </h3>
-              <p className="mt-2 text-lg text-foreground">{contactInfo.address}</p>
+              <p className="mt-2 font-display text-xl text-foreground">{contactInfo.address}</p>
             </div>
             <div>
-              <h3 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
+              <h3 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
                 Horario
               </h3>
-              <p className="mt-2 text-lg text-foreground">{contactInfo.hours}</p>
+              <p className="mt-2 font-display text-xl text-foreground">{contactInfo.hours}</p>
             </div>
           </div>
         </div>
