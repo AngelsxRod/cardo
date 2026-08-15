@@ -5,6 +5,7 @@ import Menu from "@/components/sections/Menu";
 import Gallery from "@/components/sections/Gallery";
 import Testimonials from "@/components/sections/Testimonials";
 import Location from "@/components/sections/Location";
+import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Gallery />
         <Testimonials />
         <Location />
+        <Contact />
       </main>
       <Footer />
     </>

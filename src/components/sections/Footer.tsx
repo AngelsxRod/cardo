@@ -20,10 +20,7 @@ const socialIcons: Record<string, ReactElement> = {
 
 export default function Footer() {
   return (
-    <footer
-      id="contacto"
-      className="relative overflow-hidden border-t border-border bg-foreground text-background"
-    >
+    <footer className="relative overflow-hidden border-t border-border bg-foreground text-background">
       <ThistleMark className="pointer-events-none absolute -bottom-10 -right-10 h-72 w-72 text-background/[0.06]" />
 
       <Container className="relative flex flex-col gap-10 py-16 sm:flex-row sm:items-start sm:justify-between">

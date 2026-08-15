@@ -85,19 +85,24 @@ export type ContactInfo = {
   address: string;
   hours: string;
   phone: string;
+  phoneHref: string;
   email: string;
+  emailHref: string;
   whatsappUrl: string;
   socials: NavLink[];
 };
 
 const phone = process.env.NEXT_PUBLIC_CARDO_PHONE ?? "+502 1234-5678";
 const phoneDigits = phone.replace(/\D/g, "");
+const email = "hola@cardo.gt";
 
 export const contactInfo: ContactInfo = {
   address: "5ta Avenida 6-42, Zona 10, Ciudad de Guatemala",
   hours: "Lun–Sáb · 7:00am – 8:00pm",
   phone,
-  email: "hola@cardo.gt",
+  phoneHref: `tel:+${phoneDigits}`,
+  email,
+  emailHref: `mailto:${email}`,
   whatsappUrl: `https://wa.me/${phoneDigits}?text=Hola%2C%20quisiera%20reservar%20una%20mesa%20en%20Cardo`,
   socials: [
     { label: "Instagram", href: "#" },
