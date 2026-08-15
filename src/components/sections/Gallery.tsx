@@ -21,11 +21,11 @@ export default function Gallery() {
         <div className="mt-12 grid grid-cols-2 auto-rows-[140px] gap-3 sm:grid-cols-4 sm:auto-rows-[160px] sm:gap-4">
           {galleryImages.map((image, index) => (
             <div
-              key={image.seed}
+              key={image.id}
               className={`relative overflow-hidden border border-border bg-background ${spanClasses[index] ?? ""}`}
             >
               <Image
-                src={`https://picsum.photos/seed/${image.seed}/600/600`}
+                src={`https://images.unsplash.com/${image.id}?auto=format&fit=crop&w=800&h=800&q=80`}
                 alt={image.alt}
                 fill
                 sizes="(min-width: 640px) 25vw, 50vw"

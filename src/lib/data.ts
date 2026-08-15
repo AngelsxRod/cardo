@@ -68,17 +68,17 @@ export const testimonials: Testimonial[] = [
 ];
 
 export type GalleryImage = {
-  seed: string;
+  id: string;
   alt: string;
 };
 
 export const galleryImages: GalleryImage[] = [
-  { seed: "cardo-interior-1", alt: "Interior del restaurante Cardo" },
-  { seed: "cardo-plato-1", alt: "Platillo de temporada de Cardo" },
-  { seed: "cardo-cafe-1", alt: "Café de la casa preparado en barra" },
-  { seed: "cardo-interior-2", alt: "Mesa junto a la ventana en Cardo" },
-  { seed: "cardo-plato-2", alt: "Detalle de un platillo de Cardo" },
-  { seed: "cardo-ambiente-1", alt: "Ambiente de la cafetería Cardo" },
+  { id: "photo-1751956066306-c5684cbcf385", alt: "Interior cálido de Cardo con luz natural" },
+  { id: "photo-1761271046396-97d231b59dd7", alt: "Barista sirviendo un latte art en Cardo" },
+  { id: "photo-1516749396351-ab12ad535d7c", alt: "Mesa servida con brunch en Cardo" },
+  { id: "photo-1757627550652-30788bfce978", alt: "Vegetales frescos de mercado en Cardo" },
+  { id: "photo-1543269865-cbf427effbad", alt: "Grupo de amigos conversando en Cardo" },
+  { id: "photo-1753012247961-feb139675068", alt: "Detalle de pan de masa madre en Cardo" },
 ];
 
 export type ContactInfo = {
